@@ -61,7 +61,7 @@ impl PyretClient {
 
 /**
  * See above for context...
- * This is some pretty jank code because the lifetime of PyretClient is tied to the
+ * This is some pretty finicky code because the lifetime of PyretClient is tied to the
  * return of async PyretClient::get (which is a promise handled in JS, not in Rust).
  * This solution is to pass the client back to JS and let JS preserve the lifetime
  * of the client instead.
